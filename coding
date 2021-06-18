@@ -1,0 +1,30 @@
+#include <Servo.h>
+int x=0,y=0;
+Servo m1,m2,m3,m4,m5;
+void setup(){
+  
+  m1.attach(10);
+  m2.attach(11);
+  m3.attach(6);
+  m4.attach(5);
+  m5.attach(9);
+
+}
+void loop(){
+  x=analogRead(A0);
+  y=map(x,0,1023,0,90);
+  m1.write(y);
+  x=analogRead(A1);
+  y=map(x,0,1023,0,90);
+  m2.write(y);
+  x=analogRead(A2);
+  y=map(x,0,1023,0,90);
+  m3.write(y);
+  x=analogRead(A3);
+  y=map(x,0,1023,0,90);
+  m4.write(y);
+  x=analogRead(A4);
+  y=map(x,0,1023,0,90);
+  m5.write(y); 
+  
+}
